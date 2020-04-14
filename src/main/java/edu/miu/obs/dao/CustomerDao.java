@@ -13,7 +13,7 @@ import edu.miu.obs.domain.Customer;
 public interface CustomerDao extends GenericDao<Customer> {
 
 	/** The Constant NAME. */
-	public static final String NAME = "CustomerDao";
+	public static final String NAME = "customerDao";
 
 	/**
 	 * The Class QUERY.

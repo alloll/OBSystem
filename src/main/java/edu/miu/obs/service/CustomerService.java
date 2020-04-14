@@ -23,12 +23,8 @@ public interface CustomerService {
 	 */
 	public Customer findCustomerByName(final String name);
 
-	/**
-	 * Creates the customer.
-	 *
-	 * @param customer the customer
-	 */
-	public void createCustomer(final Customer customer);
+
+	public void saveCustomer(final Customer customer);
 
 	/**
 	 * Find all customers.

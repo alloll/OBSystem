@@ -42,7 +42,7 @@ public class CustomerServiceImpl implements CustomerService {
 	 * @param customer the customer
 	 */
 	@Override
-	public void createCustomer(final Customer customer) {
+	public void saveCustomer(final Customer customer) {
 		customerDao.save(customer);
 	}
 

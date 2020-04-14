@@ -20,7 +20,7 @@ import edu.miu.obs.validation.EmptyOrSize;
 @Table(name = "CUSTOMER")
 @NamedQueries({ @NamedQuery(name = CustomerDao.QUERY_NAME.findByName, query = CustomerDao.QUERY.findByName),
 		@NamedQuery(name = CustomerDao.QUERY_NAME.findByGender, query = CustomerDao.QUERY.findByGender) })
-public class Customer extends DomainClass {
+public class Customer extends Person {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;

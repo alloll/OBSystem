@@ -17,8 +17,7 @@ import javax.persistence.Version;
  * @author Elias Rurangwa
  * @version 1.0
  */
-//@DynamicInsert(value = true)
-//@DynamicUpdate(value = true)
+
 @MappedSuperclass
 public class DomainClass implements Serializable {
 

@@ -16,14 +16,14 @@ public interface GenericDao<T> {
      *
      * @param t the t
      */
-    void save(T t);
+    void save(final T t);
 
     /**
      * Delete.
      *
      * @param id the id
      */
-    void delete(Long id);
+    void delete(final Long id);
 
     /**
      * Find one.
@@ -31,7 +31,7 @@ public interface GenericDao<T> {
      * @param id the id
      * @return the t
      */
-    T findOne(Long id);
+    T findOne(final Long id);
 
     /**
      * Update.
@@ -39,7 +39,7 @@ public interface GenericDao<T> {
      * @param t the t
      * @return the t
      */
-    T update(T t);   
+    T update(final T t);   
     
     /**
      * Find all.

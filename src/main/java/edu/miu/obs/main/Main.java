@@ -35,11 +35,11 @@ public class Main {
 	public void mainInternal(ApplicationContext applicationContext) {
 
 		Customer customer = new CustomerBuilder().withName("Jackob").withSex("Male").build();
-		customerService.createCustomer(customer);
+		customerService.saveCustomer(customer);
 		Customer savedCustomer = customerService.findCustomerByName("Jackob");
 		System.out.println("Customer name :" + savedCustomer.getName());
 		customer = new CustomerBuilder().withName("Elene").withSex("Femele").build();
-		customerService.createCustomer(customer);
+		customerService.saveCustomer(customer);
 		List<Customer> customerList = customerService.findAllCustomers();
 		// List of all customers
 		System.out.println("List of all customers");
