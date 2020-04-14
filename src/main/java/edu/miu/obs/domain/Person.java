@@ -20,7 +20,7 @@ import edu.miu.obs.validation.EmptyOrSize;
  * @author Elias Rurangwa
  * @version 1.0
  */
-@Entity 
+@Entity
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Person extends DomainClass {
 	/** The Constant serialVersionUID. */
@@ -35,7 +35,10 @@ public class Person extends DomainClass {
 	@EmptyOrSize(min = 3, max = 50, message = "{EmptyOrSize}")
 	@Column(name = "LAST_NAME", length = 50, nullable = false)
 	private String lastName;
-
+	
+	/** The sex. */
+	@Column(name = "SEX", nullable = true)
+	private String sex;
 	/** The address. */
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "PERSON_ID")
@@ -53,8 +56,6 @@ public class Person extends DomainClass {
 	/** The phone. */
 	@Column(name = "PHONE")
 	private String phone;
-
-
 
 	/**
 	 * Gets the first name.
@@ -163,5 +164,25 @@ public class Person extends DomainClass {
 	public void setAddresses(List<Address> addresses) {
 		this.addresses = addresses;
 	}
+
+	/**
+	 * Gets the sex.
+	 *
+	 * @return the sex
+	 */
+	public String getSex() {
+		return sex;
+	}
+
+	/**
+	 * Sets the sex.
+	 *
+	 * @param sex the new sex
+	 */
+	public void setSex(final String sex) {
+		this.sex = sex;
+	}
+	
+	
 
 }

@@ -34,17 +34,17 @@ public class Main {
 
 	public void mainInternal(ApplicationContext applicationContext) {
 
-		Customer customer = new CustomerBuilder().withName("Jackob").withSex("Male").build();
+		Customer customer = new CustomerBuilder().withFirstName("Jackob").withLastName("Jetis").build();
 		customerService.saveCustomer(customer);
 		Customer savedCustomer = customerService.findCustomerByName("Jackob");
-		System.out.println("Customer name :" + savedCustomer.getName());
-		customer = new CustomerBuilder().withName("Elene").withSex("Femele").build();
+		System.out.println("Customer name :" + savedCustomer.getFirstName());
+		customer = new CustomerBuilder().withFirstName("Elene").withLastName("Petete").build();
 		customerService.saveCustomer(customer);
 		List<Customer> customerList = customerService.findAllCustomers();
 		// List of all customers
 		System.out.println("List of all customers");
 		for (Customer cust : customerList) {
-			System.out.println("Name :" + cust.getName());
+			System.out.println("Name :" + cust.getFirstName());
 		}
 
 	}

@@ -20,25 +20,26 @@ public class CustomerBuilder {
 		customer = new Customer();
 	}
 
-	/**
-	 * With name.
-	 *
-	 * @param name the name
-	 * @return the customer
-	 */
-	public CustomerBuilder withName(final String name) {
-		customer.setName(name);
-		return this;
-	}
 
 	/**
-	 * With sex.
+	 * With first name.
 	 *
-	 * @param sex the sex
-	 * @return the customer
+	 * @param name the name
+	 * @return the customer builder
 	 */
-	public CustomerBuilder withSex(final String sex) {
-		customer.setSex(sex);
+	public CustomerBuilder withFirstName(final String name) {
+		customer.setFirstName(name);
+		return this;
+	}
+	
+	/**
+	 * With last name.
+	 *
+	 * @param name the name
+	 * @return the customer builder
+	 */
+	public CustomerBuilder withLastName(final String name) {
+		customer.setLastName(name);
 		return this;
 	}
 

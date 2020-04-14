@@ -14,6 +14,9 @@ import edu.miu.obs.domain.Book;
 @Repository(BookDao.NAME)
 public class BookDaoImpl extends GenericDaoImpl<Book> implements BookDao {
 
+	/**
+	 * Instantiates a new book dao impl.
+	 */
 	public BookDaoImpl() {
 		super.setDaoType(Book.class);
 	}

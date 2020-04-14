@@ -16,4 +16,7 @@ public interface DaoParameter {
 	/** The Constant SEX. */
 	public static final String SEX = "sex";
 
+	/** The Constant TYPE. */
+	public static final String TYPE = "type";
+
 }

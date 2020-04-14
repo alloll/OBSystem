@@ -21,7 +21,7 @@ public interface CustomerDao extends GenericDao<Customer> {
 	public static class QUERY {
 
 		/** The Constant findByName. */
-		public static final String findByName = "select a from Customer a where  a.name= :name and a.state= :state";
+		public static final String findByName = "select a from Customer a where  a.firstName= :name and a.state= :state";
 
 		/** The Constant findByGender. */
 		public static final String findByGender = "select a from Customer a where a.sex= :sex and a.state= :state";

@@ -2,6 +2,7 @@ package edu.miu.obs.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import edu.miu.obs.dao.BookDao;
 import edu.miu.obs.domain.Book;
@@ -12,6 +13,8 @@ import edu.miu.obs.service.BookService;
  * 
  * @author Elias Rurangwa
  */
+
+@Transactional
 @Service(BookService.NAME)
 public class BookServiceImpl implements BookService {
 	@Autowired

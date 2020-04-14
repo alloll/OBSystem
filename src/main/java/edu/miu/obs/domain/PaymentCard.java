@@ -2,6 +2,8 @@ package edu.miu.obs.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -26,7 +28,8 @@ public class PaymentCard extends DomainClass {
 
 	/** The type. */
 	@Column(name = "TYPE")
-	private String type;
+	@Enumerated(EnumType.STRING)
+	private ECardType type;
 
 	/** The card number. */
 	@Column(name = "CARD_NUMBER")
@@ -70,7 +73,7 @@ public class PaymentCard extends DomainClass {
 	 *
 	 * @return the type
 	 */
-	public String getType() {
+	public ECardType getType() {
 		return type;
 	}
 
@@ -79,7 +82,7 @@ public class PaymentCard extends DomainClass {
 	 *
 	 * @param type the new type
 	 */
-	public void setType(final String type) {
+	public void setType(final ECardType type) {
 		this.type = type;
 	}
 

@@ -17,5 +17,19 @@ public class Authority  extends DomainClass{
 	/** The authority. */
 	@Column(name="authority")
 	private String authority;
+	public String getAuthority() {
+		return authority;
+	}
+	
+	/**
+	 * Sets the authority.
+	 *
+	 * @param authority the new authority
+	 */
+	public void setAuthority(final String authority) {
+		this.authority = authority;
+	}
+	
+	
 
 }

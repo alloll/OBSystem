@@ -16,8 +16,8 @@ import edu.miu.obs.service.CustomerService;
  * @author Elias Rurangwa
  * @version 1.0
  */
-@Service(CustomerService.NAME)
 @Transactional
+@Service(CustomerService.NAME)
 public class CustomerServiceImpl implements CustomerService {
 
 	/** The customer dao. */
