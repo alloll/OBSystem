@@ -17,6 +17,8 @@ import edu.miu.obs.service.BookService;
 @Transactional
 @Service(BookService.NAME)
 public class BookServiceImpl implements BookService {
+	
+	/** The book dao. */
 	@Autowired
 	private BookDao bookDao;
 
@@ -26,7 +28,7 @@ public class BookServiceImpl implements BookService {
 	 * @param book the book
 	 */
 	@Override
-	public void saveBook(Book book) {
+	public void saveBook(final Book book) {
 		bookDao.save(book);
 
 	}
